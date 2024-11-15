@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page Design</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <style>
+      body {
+        font-family: "Cairo", sans-serif;
+        background-color: #f8f9fa;
+        direction: rtl;
+        overflow: hidden;
+        overflow-x: hidden;
+      }
+
+      header {
+        /* background-color: #fff;
+        border-bottom: 1px solid #ddd; */
+        border: 1px solid #1c274c4d;
+      }
+
+      .contact-info span {
+        margin-right: 15px;
+        color: #555;
+        display: flex;
+        align-items: center;
+      }
+
+      .contact-info i {
+        margin-left: 8px;
+        font-size: 20px;
+        color: #8359e3;
+      }
+
+      .auth-buttons .btn {
+        margin-left: 10px;
+      }
+
+      .login {
+        background-color: #8359e3;
+        color: white;
+        border-radius: 30px;
+        width: 135px;
+        font-family: Cairo;
+        font-size: 17px;
+        font-weight: 600;
+      }
+
+      .sign {
+        color: black;
+        background-color: white;
+        border-radius: 30px;
+        border: 1px solid #707b8187;
+        width: 135px;
+        backdrop-filter: blur(60px);
+        box-shadow: 0px 30px 30px 0px #452a7c26;
+        font-family: Cairo;
+        font-size: 17px;
+        font-weight: 600;
+      }
+
+      main {
+        padding-top: 20px;
+        padding-right: 0; /* Remove right padding */
+      }
+
+      .container.custom-container {
+        max-width: 97%; /* Full-width container */
+        padding-right: 15px; /* Minimal padding on the right */
+        padding-left: 15px; /* Minimal padding on the left */
+      }
+
+      /* Increase logo and image size */
+      .logo {
+        width: 200px;
+      }
+
+      .mockup-image {
+        max-width: 120%; /* Slightly larger image */
+        height: auto; /* Maintain aspect ratio */
+      }
+
+      h1 {
+        color: #4a4a4a;
+      }
+
+      .download-buttons .btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        background-color: #000;
+        border: none;
+        padding: 10px 20px;
+        margin-right: 10px; /* Space between buttons */
+      }
+
+      .download-buttons .btn img {
+        width: 25px;
+        margin-left: 5px;
+      }
+      /* Media Queries for Responsive Design */
+      @media (max-width: 768px) {
+        header {
+          padding: 10px;
+        }
+
+        .contact-info {
+          flex-wrap: wrap; /* Stack contact info */
+          justify-content: center;
+          gap: 10px;
+        }
+
+        .auth-buttons {
+          justify-content: center; /* Center buttons */
+          margin-top: 10px;
+        }
+
+        main .row {
+          flex-direction: column; /* Stack columns */
+          align-items: center;
+          text-align: center;
+        }
+
+        h1 {
+          font-size: 20px; /* Smaller font for headings */
+          line-height: 1.5;
+        }
+
+        .download-buttons .btn {
+          width: 140px;
+          padding: 8px 15px;
+          font-size: 13px;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .contact-info span {
+          font-size: 12px;
+        }
+
+        .auth-buttons .btn {
+          font-size: 12px;
+          padding: 3px 8px;
+        }
+
+        h1 {
+          font-size: 18px;
+        }
+
+        .download-buttons .btn {
+          width: 120px;
+        }
+
+        .mockup-image {
+          max-width: 80%; /* Smaller image for tiny screens */
+        }
+      }
+      @media (min-width: 768px) {
+        .tin {
+          display: none;
+        }
+      }
+      @media (max-width: 768px) {
+        .big {
+          display: none;
+        }
+        .play_font,.app_font{
+          font-size: 12px !important;
+        }
+      }
+    </style>
+    <header class="tin">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+          <button
+            class="navbar-toggler border-0"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarContent"
+            aria-controls="navbarContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarContent">
+            <div class="d-flex flex-column w-100">
+              <div class="auth-buttons">
+                <button class="btn login">تسجيل الدخول</button>
+                <button class="btn sign">دخول</button>
+              </div>
+              <div class="contact-info">
+                <span><i class="ri-mail-send-line"></i>info@aledah.com</span>
+                <span> <i class="ri-phone-fill"></i>0021891170177 </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <header class="p-3 big">
+      <div
+        class="container custom-container d-flex justify-content-between align-items-center"
+      >
+        <div class="auth-buttons">
+          <button class="btn login">تسجيل الدخول</button>
+          <button class="btn sign">دخول</button>
+        </div>
+        <div
+          class="contact-info d-flex"
+          style="justify-content: space-between; gap: 25px"
+        >
+          <span><i class="ri-mail-send-line"></i>info@aledah.com</span>
+          <span><i class="ri-phone-fill"></i>0021891170177</span>
+        </div>
+      </div>
+    </header>
+
+    <main
+      class="container custom-container d-flex align-items-center justify-content-start"
+    >
+      <div class="row w-100">
+        <div class="col-lg-6 text-right">
+          <img
+            src="images/ffb3f82ac2dadd6101d77adf49cc1a6b.png"
+            alt="Aledah Logo"
+            class="logo mb-4"
+            style="
+              text-align: right;
+              height: 188px;
+              position: relative;
+              top: 7%;
+              transform: translateX(20%);
+            "
+          />
+          <h1 class="mb-3" style="line-height: 77px; color: #1c274c">
+            <span style="color: #8359e3">الايضاح</span> منصة ليبية رائدة في
+            <br />مجال
+            <span style="background-color: #fbeb1c">التدريب الاونلاين</span>
+          </h1>
+          <p class="lead mb-3" style="color: #000000">قم بتحميل التطبيق الآن</p>
+          <div class="download-buttons d-flex justify-content-start">
+            <a
+              href="#"
+              class="btn btn-dark d-flex align-items-center"
+              style="
+                width: 180px;
+                height: 52px;
+                top: 52px;
+                gap: 0px;
+                opacity: 0px;
+                gap: 15px;
+              "
+            >
+              <div style="color: #ffffff; font-size: 17px" class="play_font">
+                <span
+                  style="
+                    width: 51.8px;
+                    height: 8.15px;
+                    top: 17.08px;
+                    left: 55.14px;
+                    gap: 0px;
+                    border: 0.16px 0px 0px 0px;
+                    opacity: 0px;
+                    font-size: 13px;
+                  "
+                  >GET IT ON</span
+                >
+                <br />
+                Google Play
+              </div>
+              <img
+                class="play_img"
+                src="images/تنزيل (14)_preview_rev_1.png"
+                style="width: 35px"
+              />
+            </a>
+            <a
+              href="#"
+              class="btn btn-dark d-flex align-items-center"
+              style="
+                width: 180px;
+                height: 52px;
+                gap: 0px;
+                opacity: 0px;
+                color: #ffffff;
+              "
+            >
+              <div class="app_font">
+                <span style="font-size: 13px">Download on the</span> <br />
+                App Store
+              </div>
+              <svg
+                style="margin-right: 10px"
+                width="28"
+                height="34"
+                viewBox="0 0 28 34"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M23.1707 17.7191C23.132 13.5292 26.6894 11.4908 26.852 11.3959C24.8374 8.53203 21.7147 8.14073 20.6174 8.10953C17.9947 7.84043 15.4507 9.63963 14.1147 9.63963C12.752 9.63963 10.6947 8.13553 8.47737 8.17973C5.62403 8.22263 2.9547 9.83333 1.4907 12.3345C-1.53063 17.4344 0.722703 24.9289 3.61737 29.0512C5.06537 31.0701 6.75737 33.3243 8.97204 33.245C11.1387 33.1579 11.948 31.8982 14.5627 31.8982C17.1534 31.8982 17.9134 33.245 20.172 33.1943C22.4974 33.1579 23.9614 31.1663 25.3587 29.1292C27.032 26.8152 27.704 24.5363 27.7307 24.4193C27.676 24.4011 23.2147 22.741 23.1707 17.7191Z"
+                  fill="white"
+                />
+                <path
+                  d="M18.904 5.39773C20.0694 3.97683 20.8667 2.04373 20.6454 0.0820312C18.9587 0.154831 16.8494 1.21953 15.6347 2.60923C14.56 3.83383 13.6 5.84103 13.848 7.72863C15.7427 7.86643 17.688 6.79653 18.904 5.39773Z"
+                  fill="white"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <img
+            src="images/952f144754d0d734ce68d96bd49ad20c.png"
+            alt="Phone Mockup"
+            class="img-fluid mockup-image"
+          />
+        </div>
+      </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
